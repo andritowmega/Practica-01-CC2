@@ -3,25 +3,25 @@
 using namespace std;
 int entero(char *str)
 {
-    int res = 0; //inicializamos el resultado
-    for (int i = 0; str[i] != '\0'; ++i)
-        res = res*10 + str[i] - '0';
+    int res = 0; ///inicializamos el resultado
+    for (int i = 0; str[i] != '\0'; ++i)/// un for que recorra toda la lista hasta encontrar el fin de cadena
+        res = res*10 + str[i] - '0';/// para mostrar el resultado entero
 
     return res;
 }
 
 float flotante(char *x)
 {
-	float total=0, num;
-	int df=10,i=0;
+	float total=0, num; /// 
+	int flotante1=10,i=0;
 	bool decimal=false;
 	while(x[i])
 	{
 		num=x[i]-'0';
 		if(decimal)
 		{
-			num=num/df;
-			df=df*10;
+			num=num/flotante1;
+			flotante1=flotante1*10;
 		}
 		else if (!decimal && ( x[i]>='0' && x[i]<='9'))
 			total=total*10;
